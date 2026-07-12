@@ -16,14 +16,14 @@ const bird = {
     y: canvas.height / 2,
     width: 30,
     height: 30,
-    gravity: 0.5,
+    gravity: 0.25,
     velocity: 0,
-    jump: -10
+    jump: -5
 };
 
 // Pipes array
 const pipes = [];
-const pipeGap = 100;
+const pipeGap = 200;
 const pipeWidth = 50;
 const pipeDistance = 150;
 
@@ -86,7 +86,7 @@ function updatePipes() {
     
     // Move pipes
     for (let i = pipes.length - 1; i >= 0; i--) {
-        pipes[i].x -= 5;
+        pipes[i].x -= 2.5;
         
         // Check collision
         if (checkCollision(pipes[i])) {
